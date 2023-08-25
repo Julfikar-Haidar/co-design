@@ -1,6 +1,5 @@
 .navbar_main {
   padding: 17px 0;
-
   .navbar_main--logo {
     width: 90px;
     height: 40px;
@@ -15,6 +14,10 @@
   .right__left {
     border-right: 2px solid red;
     padding-right: 15px;
+    @media(max-width: 768px) {
+        border-right: none;
+          padding-right: 0;
+    }
   }
 
   .dropdown {
@@ -60,6 +63,8 @@
         color: orange;
         padding: 10px 5px;
       }
+
+    
     }
 
     &:hover {
@@ -69,5 +74,33 @@
 
   .dropdown:hover .dropdown--content {
     display: block;
+  }
+  .responsive_mobile {
+    @media(max-width: 768px) {
+      display: none;
+     
+    }
+  }
+     .show_humbarg {
+      display: none;
+      @media(max-width: 768px) {
+          display: block;
+      
+        }
+     }
+  .mobile_navbar {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: auto;
+    background-color: green;
+    padding: 10px 10px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 17px 10px;
   }
 }

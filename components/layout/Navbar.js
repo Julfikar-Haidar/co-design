@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
   BsThreeDots,
   BsFacebook,
@@ -6,14 +7,23 @@ import {
   BsInstagram,
   BsWhatsapp,
   BsSkype,
+  BsList,
 } from "react-icons/bs";
+import { AiFillCloseCircle } from "react-icons/ai";
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleOpen = () => {
+    setOpen(true);
+  };
   return (
     <div className="container navbar_main flex align-center">
       <div className="navbar_main--logo">
         <img src="/logo.png" alt="logo" />
       </div>
-      <div className="flex flex-gap-20">
+      <div className="flex flex-gap-20 responsive_mobile">
         <div className="right__left flex flex-gap-10 align-center">
           <ul className="flex flex-gap-10 align-center">
             <li>
@@ -60,6 +70,52 @@ const Navbar = () => {
           <button className="right__right--btn myButton">Join Free</button>
         </div>
       </div>
+
+      <div className="show_humbarg">
+        {!open && (
+          <button type="submit" onClick={handleOpen}>
+            <BsList />
+          </button>
+        )}
+      </div>
+      {open ? (
+        <div className="mobile_navbar">
+          <button
+            style={{ float: "right" }}
+            type="submit"
+            onClick={handleClose}
+          >
+            <AiFillCloseCircle />
+          </button>
+
+          <div className="flex-column flex-gap-20 ">
+            <div className="right__left flex-column flex-gap-10 align-center">
+              <ul className="flex-column flex-gap-10 align-center">
+                <li>
+                  <a>Explore</a>
+                </li>
+                <li>
+                  <a>Discover</a>
+                </li>
+                <li>
+                  <a>For Professionals</a>
+                </li>
+                {/* <li>
+              <a>
+                <BsThreeDots />
+              </a>
+            </li> */}
+              </ul>
+
+              <button className="myButton_transparent">Submit Photos</button>
+            </div>
+            <div className="right__right flex flex-gap-10 align-center">
+              <a href="#">Login</a>
+              <button className="right__right--btn myButton">Join Free</button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };
