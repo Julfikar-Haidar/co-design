@@ -1,0 +1,152 @@
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    // padding: 20px;
+}
+
+/* Flexbox */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container {
+    @extend .flex;
+}
+
+.flex-row {
+    @extend .flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-gap-5 {
+    gap: 5px;
+}
+
+.flex-gap-10 {
+    gap: 10px;
+}
+
+.flex-gap-15 {
+    gap: 15px;
+}
+
+.flex-gap-20 {
+    gap: 20px;
+}
+
+.flex-gap-25 {
+    gap: 25px;
+}
+
+/* CSS Grid */
+.grid {
+    display: grid;
+}
+
+.grid-container {
+    @extend .grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-3-responsive {
+    @include lgMaxBreakPoint {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include smMaxBreakPoint {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.grid-gap-20 {
+    gap: 20px;
+}
+
+.place-center {
+    place-items: center;
+}
+
+// btn
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+
+}
+
+.myButton {
+    background-color: #E17700;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #E17700;
+    border: none;
+    &:hover {
+        background-color: #e6b884;
+    }
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.myButton_transparent {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+.myButton_transparent:hover {
+    background-color: transparent;
+}
+
+.myButton_transparent:active {
+    position: relative;
+    top: 1px;
+}

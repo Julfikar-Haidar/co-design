@@ -1,0 +1,31 @@
+@import "../styles/pages/_global-imports.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  // max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $primaryColor;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.hero_top_slider {
+  position: relative;
+}
+
