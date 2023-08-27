@@ -1,11 +1,15 @@
 .herosection_main {
-  background-image: url("/background.jpg");
+  background-image: url("/2.jpg");
   height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-size: cover;
   z-index: -999999;
+  @media (max-width: 612px) {
+    background-position: center center;
+  }
   h1 {
     font-size: 25px;
     color: white;
@@ -13,57 +17,57 @@
     text-align: center;
     z-index: 1;
   }
-.search_container {
+  .search_container {
     position: relative;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
-  .searchbar {
-    font-size: 25;
-    width: 522px;
-    height: 30px;
-    border: none;
-    outline: none;
-    border-radius: 10rem;
-    padding: 16px;
-    transition: all 0.1s;
-    transition-delay: 0.1s;
-    &:hover {
-            height: 35px;
-        }
-        @media(max-width: 768px) {
-          width: 100%;
-        }
-  }
+    .searchbar {
+      font-size: 25;
+      width: 522px;
+      height: 30px;
+      border: none;
+      outline: none;
+      border-radius: 10rem;
+      padding: 16px;
+      transition: all 0.1s;
+      transition-delay: 0.1s;
+      &:hover {
+        height: 35px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
 
-  .search--icon {
-    height: 10px;
-    position: absolute;
-    top: 21px;
-    right: 16px;
-    transition: all 0.1s;
-    transition-delay: 0.1s;
-    color: black;
-  }
+    .search--icon {
+      height: 10px;
+      position: absolute;
+      top: 21px;
+      right: 16px;
+      transition: all 0.1s;
+      transition-delay: 0.1s;
+      color: black;
+    }
 
-  .search--icon:hover {
-    cursor: pointer;
-  }
+    .search--icon:hover {
+      cursor: pointer;
+    }
 
-  .searchbar:hover  {
-    height: 35px;
-    top: 16px;
-    right: 0;
-  }
+    .searchbar:hover {
+      height: 35px;
+      top: 16px;
+      right: 0;
+    }
 
-  .searchbar::placeholder {
-    opacity: 0.3;
-  }
+    .searchbar::placeholder {
+      opacity: 0.3;
+    }
 
-  small {
-    font-size: 12px;
-    color: white;
+    small {
+      font-size: 12px;
+      color: white;
+    }
   }
-}
 }

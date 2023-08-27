@@ -16,6 +16,11 @@
         font-weight: normal;
         cursor: pointer;
       }
+      .active-button {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+      }
     }
     @media (max-width: 768px) {
       flex-direction: column;

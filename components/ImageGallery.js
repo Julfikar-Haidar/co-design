@@ -53,7 +53,7 @@ const images = [
 ];
 const ImageGallery = () => {
   const [FilteredPhotos, SetFilterPhotos] = useState(images);
-
+  const [activeButton, setActiveButton] = useState(null);
   const FilterPhotos = (str) => {
     if (str === "All") {
       SetFilterPhotos(images);
@@ -81,41 +81,56 @@ const ImageGallery = () => {
       <div className="filter_option_main">
         <div className="filter_option_main--btn_filter">
           <button
-            className="filter_option_main--btn"
+            className={`filter_option_main--btn ${
+              activeButton === 1 ? "active-button" : ""
+            } `}
             onClick={() => {
               SortPhotos("name", "1", "-1");
+              setActiveButton(1);
             }}
           >
             All
           </button>
           <button
-            className="filter_option_main--btn"
+            className={`filter_option_main--btn ${
+              activeButton === 2 ? "active-button" : ""
+            } `}
             onClick={() => {
               SortPhotos("likes", "1", "-1");
+              setActiveButton(2);
             }}
           >
             Photo
           </button>
           <button
-            className="filter_option_main--btn"
+            className={`filter_option_main--btn ${
+              activeButton === 3 ? "active-button" : ""
+            } `}
             onClick={() => {
               SortPhotos("likes", "1", "-1");
+              setActiveButton(3);
             }}
           >
             Video
           </button>
           <button
-            className="filter_option_main--btn"
+            className={`filter_option_main--btn ${
+              activeButton === 4 ? "active-button" : ""
+            } `}
             onClick={() => {
               SortPhotos("name", "1", "-1");
+              setActiveButton(4);
             }}
           >
             Freebies
           </button>
           <button
-            className="filter_option_main--btn"
+            className={`filter_option_main--btn ${
+              activeButton === 5 ? "active-button" : ""
+            } `}
             onClick={() => {
               SortPhotos("name", "1", "-1");
+              setActiveButton(5);
             }}
           >
             360

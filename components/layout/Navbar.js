@@ -90,9 +90,9 @@ const Navbar = () => {
 
           <div className="flex-column flex-gap-20 ">
             <div className="right__left flex-column flex-gap-10 align-center">
-              <ul className="flex-column flex-gap-10 align-center">
+              <ul className="flex-column flex-gap-10 align-center ">
                 <li>
-                  <a>Explore</a>
+                  <a className="text--color">Explore</a>
                 </li>
                 <li>
                   <a>Discover</a>
