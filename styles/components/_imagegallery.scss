@@ -31,11 +31,7 @@
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-    -moz-column-width: 33%;
-    -webkit-column-width: 33%;
-    column-width: 33%;
     padding: 0 12px;
-    columns: 3 !important;
     .magGallery_main--pics {
       -webkit-transition: all 350ms ease;
       transition: all 350ms ease;
@@ -50,17 +46,12 @@
       -webkit-column-count: 2;
       -moz-column-count: 2;
       column-count: 2;
-      columns: 2 !important;
     }
 
     @media (max-width: 480px) {
       -webkit-column-count: 1;
       -moz-column-count: 1;
       column-count: 1;
-      -moz-column-width: 100%;
-      -webkit-column-width: 100%;
-      column-width: 100%;
-      columns: 1 !important;
     }
   }
 }
